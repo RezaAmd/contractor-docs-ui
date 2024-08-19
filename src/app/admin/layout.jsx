@@ -1,5 +1,6 @@
 import "@/app/styles/globals.css";
 import Navbar from "@/components/navbars/admin/navbar";
+import "../../../public/fonts/IRANYekanX/fontiran.css";
 
 export const metadata = {
   title: "Contractor Documents",
@@ -11,7 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="fa" dir="rtl">
       <body>
         <Navbar />
-        {children}
+        <main className="container mx-auto">{children}</main>
       </body>
     </html>
   );
