@@ -3,13 +3,13 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="bg-teal-900 p-4">
+    <nav className="bg-indigo-900 p-4">
       <div className="flex justify-between container mx-auto">
         <div className="flex me-auto items-center">
-          <div className="text-white text-lg font-bold me-5">
+          <div className="text-white text-lg font-bold me-6">
             <Link href="/">مدیریت اسناد</Link>
           </div>
-          <div className="space-x-4 gap-2">
+          <div className="flex gap-3">
             <Link href="/" className="text-white">
               خانه
             </Link>
