@@ -1,5 +1,5 @@
 import "@/app/styles/globals.css";
-import Navbar from "@/components/navbars/navbar";
+import Navbar from "@/components/Navbar/AnonymousNavbar";
 
 export const metadata = {
   title: "Contractor Documents",

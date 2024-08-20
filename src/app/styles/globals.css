@@ -28,6 +28,16 @@ body {
     min-height: 100vh;
     font-family: IRANYekanXFaNum;
 }
+a{
+  display: inline-block;
+}
+label {
+  display: inline-block;
+}
+
+svg {
+  display: unset;
+}
 
 @layer utilities {
   .text-balance {
