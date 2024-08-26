@@ -1,5 +1,7 @@
 import "@/app/styles/globals.css";
+import React from "react";
 import Navbar from "@/components/Navbar/AdminNavbar";
+import { NextUIProvider } from "@nextui-org/react";
 
 export const metadata = {
   title: "Contractor Documents",
@@ -10,8 +12,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl">
       <body>
-        <Navbar />
-        <main className="container mx-auto">{children}</main>
+        <React.StrictMode>
+          <NextUIProvider>
+            <Navbar />
+            <main className="container mx-auto">{children}</main>
+          </NextUIProvider>
+        </React.StrictMode>
       </body>
     </html>
   );
