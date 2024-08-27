@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
         <React.StrictMode>
           <NextUIProvider>
             <Navbar />
-            <main className="container mx-auto">{children}</main>
+            <main className="mx-auto py-4 px-2">{children}</main>
           </NextUIProvider>
         </React.StrictMode>
       </body>

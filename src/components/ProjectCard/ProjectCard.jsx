@@ -2,12 +2,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FaStar, FaRegStar } from "react-icons/fa";
-import { GiDamagedHouse  } from "react-icons/gi";
+import { GiDamagedHouse } from "react-icons/gi";
 import { GrUserWorker } from "react-icons/gr";
 
 const ProjectCard = ({ index = 0, project = null }) => {
   const [isStar, setIsStar] = useState(false);
-
   const bgColorsPallete = [
     "from-blue-600 to-purple-800",
     "from-yellow-500 to-orange-700",
@@ -30,19 +29,15 @@ const ProjectCard = ({ index = 0, project = null }) => {
       {project && (
         <div
           key={index}
-          className={`h-[100px] min-w-[20%] grid px-3 py-2 rounded-lg bg-gradient-to-bl
-      ${pickAnColor(index)}`}
+          className={`h-[100px] grid px-3 py-2 rounded-lg bg-gradient-to-bl
+            ${pickAnColor(index)}`}
         >
           <Link className="flex flex-col justify-between" href="#">
             <div>{project.name}</div>
             <div className="flex justify-between">
               <div className="opacity-80">
-                {project.type == "renovation" && (
-                    <GiDamagedHouse />
-                )}
-                {project.type == "construct" && (
-                    <GrUserWorker />
-                )}
+                {project.type == "renovation" && <GiDamagedHouse />}
+                {project.type == "construct" && <GrUserWorker />}
               </div>
               <span
                 className="hover:scale-125 transition-all"

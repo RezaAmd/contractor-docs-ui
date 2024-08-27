@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-800 text-gray-300 p-4">
-      <div className="flex justify-between items-center container mx-auto">
+      <div className="flex justify-between items-center">
         <div className="text-lg font-bold me-5">
           <Link href="/" className="hover:text-white">مدیریت اسناد</Link>
         </div>
