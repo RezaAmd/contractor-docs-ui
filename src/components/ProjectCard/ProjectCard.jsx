@@ -33,11 +33,11 @@ const ProjectCard = ({ index = 0, project = null }) => {
             ${pickAnColor(index)}`}
         >
           <Link className="flex flex-col justify-between" href="#">
-            <div>{project.name}</div>
+            <div>{project.title}</div>
             <div className="flex justify-between">
               <div className="opacity-80">
-                {project.type == "renovation" && <GiDamagedHouse />}
-                {project.type == "construct" && <GrUserWorker />}
+                {project.projectTypeId == 10 && <GiDamagedHouse />}
+                {project.projectTypeId == 5 && <GrUserWorker />}
               </div>
               <span
                 className="hover:scale-125 transition-all"

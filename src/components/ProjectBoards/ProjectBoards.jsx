@@ -1,21 +1,37 @@
 "use client";
 import ProjectCard from "../ProjectCard/ProjectCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getAllProjects } from "../../services/apiClient";
 
 const ProjectBoards = ({ className = null }) => {
-  const [projects, setProjects] = useState([
-    { name: "پاسداران 3", type: "construct" },
-    { name: "برج سرخرود 35 طبقه", type: "renovation" },
-    { name: "برج سرخرود 35 طبقه", type: "renovation" },
-    { name: "برج سرخرود 35 طبقه", type: "renovation" },
-    { name: "برج سرخرود 35 طبقه", type: "construct" },
-    { name: "برج سرخرود 35 طبقه", type: "renovation" },
-    { name: "برج سرخرود 35 طبقه", type: "construct" },
-    { name: "برج سرخرود 35 طبقه", type: "construct" },
-    { name: "برج سرخرود 35 طبقه", type: "renovation" },
-    { name: "برج سرخرود 35 طبقه", type: "construct" },
-    { name: "برج سرخرود 35 طبقه", type: "construct" },
-  ]);
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const data = await getAllProjects();
+        setProjects(data);
+      } catch (error) {
+        console.error('Error fetching projects:', error);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
+  // const [projects, setProjects] = useState([
+  //   { name: "پاسداران 3", type: "construct" },
+  //   { name: "برج سرخرود 35 طبقه", type: "renovation" },
+  //   { name: "برج سرخرود 35 طبقه", type: "renovation" },
+  //   { name: "برج سرخرود 35 طبقه", type: "renovation" },
+  //   { name: "برج سرخرود 35 طبقه", type: "construct" },
+  //   { name: "برج سرخرود 35 طبقه", type: "renovation" },
+  //   { name: "برج سرخرود 35 طبقه", type: "construct" },
+  //   { name: "برج سرخرود 35 طبقه", type: "construct" },
+  //   { name: "برج سرخرود 35 طبقه", type: "renovation" },
+  //   { name: "برج سرخرود 35 طبقه", type: "construct" },
+  //   { name: "برج سرخرود 35 طبقه", type: "construct" },
+  // ]);
+
   return (
     <>
       {projects && (
