@@ -8,8 +8,7 @@ const SignInForm = () => {
   const router = useRouter();
   
   const signInClickHandle = () => {
-    alert("log'e che ini?! :|");
-    router.push("/admin");
+    // TODO: Complete signin with API.
   };
   return (
     <div>
